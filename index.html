@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smart Bin Dashboard</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      padding: 40px;
+    }
+    .dashboard-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 130px;
+    }
+    .dashboard-header img {
+      width: 70px;
+      margin-right: 40px;
+    }
+    .gauge-container {
+      display: flex;
+      justify-content: space-around;
+      gap: 40px;
+    }
+    .gauge-box {
+        float: left;
+      background: lavender;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .modebar {
+      display: none;
+    }
+    canvas {
+      max-width: 300px;
+    }
+    .bar-box {
+  margin-top: -100px; 
+}
+
+
+  </style>
+
+    <script src='https://cdn.plot.ly/plotly-3.0.1.min.js'></script>
+
+  </head>
+
+
+  <body>
+
+    <div class="dashboard-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3439/3439691.png" alt="bin" />
+        <div style="margin-left: 20px;">
+            <h2>Dashboard</h2>
+            <span style="color: green;">● Online</span><br>
+            Owner: Sortyx Ventures Private Limited
+        </div>
+  </div>
+
+  <div class="gauge-box">
+      <div id='myDiv1'><!-- Plotly chart will be drawn inside this DIV --></div>
+    </div>
+
+    <div style = "float:left; width:100px;">&nbsp;</div>
+
+    <div class="gauge-box">
+      <div id='myDiv2'><!-- Plotly chart will be drawn inside this DIV --></div>
+      <script type = module src="script.js"></script>
+    </div>
+
+    <div style = "float:left; width:100px;">&nbsp;</div>
+    
+    <div class="gauge-box bar-box">
+      <div id="barChartDiv"><!-- Bar chart will appear here --></div>
+    </div>
+
+
+  </body>
+</html>
